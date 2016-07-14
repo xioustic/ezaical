@@ -25,7 +25,7 @@ var dataToCal = function (data) {
     return cal.toString();
 }
 
-app.get('/', function(req, res) {
+app.get('*', function(req, res) {
     request_time = new Date();
     res.type('text/calendar');
     res.setHeader('Content-disposition', 'attachment; filename=easyallies.ical');
